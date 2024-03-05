@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: cyan;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    color: rgb(253, 0, 198);
+}
+.logo{
+    margin: 20px;
+    font-weight: 900;
+    font-size: 30px;
+}
+ul li{
+    display: inline-block;
+    margin-left: 10px;
+    padding: 25px;
+    font-weight: 700;
+    font-size: 20px;
+}
+ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 5, 209);
+    transition: .5s ease-in-out;
+}
+
+.image-slider{
+    min-height: 100vh;
+    position: relative;
+    background-image: url(img/p1.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    transition: 0.3s;
+    mix-blend-mode: difference;
+}
+.image-slider *{
+    box-sizing: border-box;
+}
+.caption{
+    background: linear-gradient(rgba(0, 0, 0, 0), #000);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 4em 1em 2em 1em;
+    text-align: center;
+}
+.caption h1{
+    margin: 0;
+}
+p{
+    color: #8a8a8a;
+}
+.next, .prev{
+    background: #fff;
+    color: #000;
+    position: absolute;
+    top: 40%;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: 600;
+}
+.next:hover{
+    background: #000;
+    color: #fff;
+}
+.prev:hover{
+    background: #000;
+    color: #fff;
+}
+.next{
+    right: 1em;
+}
+.prev{
+    left: 1em;
+}
+.image-fade{
+    animation: imgFade 0.5s ease-in-out;
+}
+@keyframes imgFade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
